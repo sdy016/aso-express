@@ -5,13 +5,22 @@ var router = express.Router();
 const appController = require('../controllers/controller.app');
 
 //[GET] 나의 앱 리스트 조회
-router.get('/my', appController.getMyApps);
+router.get('/my/apps', appController.getMyApps);
 
-//[GET] 나의 앱 리스트 조회
-router.get('/detail', appController.getAppDetailInfo);
+//[GET] 나의 앱 상세 조회
+router.get('/my/app', appController.getAppDetail);
 
 //[GET] 나의 경쟁 앱 리스트 조회
-router.get('/competitor', appController.getCompetitorApps);
+router.get('/competitor/apps', appController.getCompetitorApps);
+
+//[GET] 나의 경쟁 앱 리스트 조회
+router.get('/competitor/app', appController.getCompetitorApps);
+
+//[GET] 나의 경쟁 앱 리스트 조회
+router.get('/visibility', appController.getCompetitorApps);
+
+//[GET] 나의 앱 리스트 조회
+router.get('/my/list', appController.getAppList);
 
 //[POST] 나의 앱 등록
 router.post('/my', appController.setMyApps);

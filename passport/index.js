@@ -1,7 +1,7 @@
 const passport = require('passport');
 const { Strategy: LocalStrategy } = require('passport-local');
 const bcrypt = require('bcrypt');
-const { passportUserExists } = require('../services/deprecated/service.auth');
+const { passportUserExists } = require('../services/service.account');
 
 const passportConfig = { usernameField: 'admin_id', passwordField: 'password' };
 const { ExtractJwt, Strategy: JWTStrategy } = require('passport-jwt');

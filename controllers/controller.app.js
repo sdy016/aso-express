@@ -116,22 +116,22 @@ exports.getCompetitorApps = async (req, res, next) => {
 };
 
 //[GET] Rosetta Score
-exports.getRosettaScore = async (req, res, next) => {
-  try {
-    const _appId = req.query.appId;
-    const _country = req.query.country;
-    const _providerType = req.query.providerType;
-    const result = [
-      { type: 'mko', score: 70 },
-      { type: 'cro', score: 62 },
-      { type: 'rso', score: 53 },
-      { type: 'goal', score: 120 },
-    ];
-    return res.send(result);
-  } catch (error) {
-    return res.status(500).json(error.message);
-  }
-};
+// exports.getRosettaScore = async (req, res, next) => {
+//   try {
+//     const _appId = req.query.appId;
+//     const _country = req.query.country;
+//     const _providerType = req.query.providerType;
+//     const result = [
+//       { type: 'mko', score: 70 },
+//       { type: 'cro', score: 62 },
+//       { type: 'rso', score: 53 },
+//       { type: 'goal', score: 120 },
+//     ];
+//     return res.send(result);
+//   } catch (error) {
+//     return res.status(500).json(error.message);
+//   }
+// };
 
 //[GET] Review  Best / Worst
 exports.getReviewSummary = async (req, res, next) => {

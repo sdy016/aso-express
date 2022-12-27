@@ -13,8 +13,8 @@ router.get('/competitor/apps', appController.getCompetitorApps);
 //[GET] 앱 상세 조회
 router.get('/detail', appController.getAppDetail);
 
-//[GET] Rosetta  Score
-router.get('/score', appController.getRosettaScore);
+// //[GET] Rosetta  Score
+// router.get('/score', appController.getRosettaScore);
 
 //[GET] Review  Best / Worst
 router.get('/review/summary', appController.getReviewSummary);

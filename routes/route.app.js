@@ -13,34 +13,19 @@ router.get('/competitor/apps', appController.getCompetitorApps);
 //[GET] 앱 상세 조회
 router.get('/detail', appController.getAppDetail);
 
-// //[GET] 나의 경쟁 앱 리스트 조회
-// router.get('/visibility', appController.getCompetitorApps);
+//[GET] Rosetta  Score
+router.get('/score', appController.getRosettaScore);
 
-// //[GET] 나의 앱 리스트 조회
-// router.get('/my/list', appController.getAppList);
+//[GET] Review  Best / Worst
+router.get('/review/summary', appController.getReviewSummary);
 
-// //[POST] 나의 앱 등록
-// router.post('/my', appController.setMyApps);
+//[GET] Review Chart Data
+router.get('/review/chart', appController.getReviewChart);
 
-// //[GET] 나의 앱 및 경쟁자 리스트 한꺼번에 조회
-// router.get('/my/competitor', appController.getMyAppAndCopetitorList);
+//[GET] Review word cloud
+router.get('/review/words', appController.getReviewWords);
 
-// //[POST] 나의 경쟁 앱 등록 / 수정
-// router.post('/competitor', appController.setCompetitorApps);
-
-// //[DELETE] 나의 앱 삭제
-// router.delete('/my', appController.deleteMyApps);
-
-// //[GET] review summary (최고점 / 최저점)
-// router.get('/review/bestworst', appController.getReviewBestWorst);
-
-// //[GET] Featured History
-// router.get('/featured', appController.getFeaturedHistory);
-
-// //[GET] Daily Review Count
-// router.get('/review/daily', appController.getDailyReviewCount);
-
-// //[GET] Review
-// router.get('/review', appController.getReviewList);
+//[GET] Review word cloud
+router.get('/category/ranking', appController.getCategoryRanking);
 
 module.exports = router;

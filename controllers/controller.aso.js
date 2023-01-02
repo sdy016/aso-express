@@ -1,12 +1,41 @@
 //[GET] Rosetta Score status 조회
 exports.getRosettaScoreStatus = async (req, res, next) => {
   try {
-    const result = {
-      mko: 70,
-      cro: 62,
-      rso: 53,
-      goal: 250,
-    };
+    // const result = {
+    //   mko: 70,
+    //   cro: 62,
+    //   rso: 53,
+    //   goal: 250,
+    // };
+    // // FRONT- app.profile.model.ts > IRosettaScore 타입으로 변경처리
+    const result = [
+      {
+        type: 'MKO',
+        data: [
+          { indicator: 'TITLE', name: 'Title', score: 10 },
+          { indicator: 'SUB_TITLE', name: 'Subtitle', score: 10 },
+          { indicator: 'PROMOTIONAL_TEXT', name: 'Promotional Text', score: 10 },
+          { indicator: 'LONG_DESCRIPTION', name: 'Long Description', score: 10 },
+        ],
+      },
+      {
+        type: 'CRO',
+        data: [
+          { indicator: 'SCREENSHOT', name: 'Screenshot', score: 10 },
+          { indicator: 'PREVIEW_VIDEO', name: 'Preview Video', score: 10 },
+          { indicator: 'A/B_TEST', name: 'A/B Test', score: 10 },
+        ],
+      },
+      {
+        type: 'RSO',
+        data: [
+          { indicator: 'SIZE', name: 'Size', score: 10 },
+          { indicator: 'VERSIONS', name: 'Versions', score: 10 },
+          { indicator: '#_OF_REVIEWS', name: '# Of Reviews', score: 10 },
+          { indicator: 'RATINGS', name: 'Ratings', score: 10 },
+        ],
+      },
+    ];
     return res.send(result);
   } catch (error) {
     return res.status(500).json(error.message);

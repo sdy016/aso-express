@@ -25,7 +25,19 @@ router.get('/review/chart', appController.getReviewChart);
 //[GET] Review word cloud
 router.get('/review/words', appController.getReviewWords);
 
-//[GET] Review word cloud
+//[GET] 카테고리 랭킹
 router.get('/category/ranking', appController.getCategoryRanking);
+
+//[POST] My App 등록.
+router.post('/my/app', appController.postMyApp);
+
+//[DELETE] My App 삭제.
+router.delete('/my/app', appController.deleteMyApp);
+
+//[POST] 경쟁자 App 추가.
+router.post('/competitor/app', appController.postCompetitorApp);
+
+//[DELETE] 경쟁자 App 삭제.
+router.delete('/competitor/app', appController.deleteCompetitorApp);
 
 module.exports = router;

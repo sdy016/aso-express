@@ -210,6 +210,7 @@ exports.getReviewWords = async (req, res, next) => {
   }
 };
 
+//[GET] 카테고리 랭킹
 exports.getCategoryRanking = async (req, res, next) => {
   try {
     const _appId = req.query.appId;
@@ -225,6 +226,62 @@ exports.getCategoryRanking = async (req, res, next) => {
     } else {
       result = rankingCategoryCompititorsData();
     }
+    return res.send(result);
+  } catch (error) {
+    return res.status(500).json(error.message);
+  }
+};
+
+//[POST] My App 등록.
+exports.postMyApp = async (req, res, next) => {
+  try {
+    const { appId, country, providerType } = req.body;
+
+    let result = true;
+
+    return res.send(result);
+  } catch (error) {
+    return res.status(500).json(error.message);
+  }
+};
+
+//[DEL] My App 삭제.
+exports.deleteMyApp = async (req, res, next) => {
+  try {
+    const _appId = req.query.appId;
+    const _country = req.query.country;
+    const _providerType = req.query.providerType;
+
+    let result = true;
+
+    return res.send(result);
+  } catch (error) {
+    return res.status(500).json(error.message);
+  }
+};
+
+//[POST] 경쟁자 App 추가.
+exports.postCompetitorApp = async (req, res, next) => {
+  try {
+    const { appId, country, providerType } = req.body;
+
+    let result = true;
+
+    return res.send(result);
+  } catch (error) {
+    return res.status(500).json(error.message);
+  }
+};
+
+//[DEL] 경쟁자 App 삭제.
+exports.deleteCompetitorApp = async (req, res, next) => {
+  try {
+    const _appId = req.query.appId;
+    const _country = req.query.country;
+    const _providerType = req.query.providerType;
+
+    let result = true;
+
     return res.send(result);
   } catch (error) {
     return res.status(500).json(error.message);

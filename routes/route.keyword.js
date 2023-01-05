@@ -11,13 +11,13 @@ const keywordController = require('../controllers/controller.keyword');
 router.post('/main/competitior', keywordController.getMainCompetitior);
 
 //[GET] 메인 > 카테고리 키워드 조회.
-router.post('/main/category', keywordController.getMainCategory);
+router.get('/main/category', keywordController.getMainCategory);
 
 //[GET] 메인 > description 키워드 조회.
-router.post('/main/description', keywordController.getMainDescription);
+router.get('/main/description', keywordController.getMainDescription);
 
 //[GET] 메인 > ranked 키워드 조회.
-router.post('/main/ranked', keywordController.getMainRanked);
+router.get('/main/ranked', keywordController.getMainRanked);
 
 /**
  * Keyword Custom API

@@ -19,6 +19,7 @@ const passportConfig = require('./passport');
 const cors = require('cors');
 const appRouter = require('./routes/route.app');
 const asoRouter = require('./routes/route.aso');
+const keywordRouter = require('./routes/route.keyword');
 // const mainbannerRouter = require('./routes/route.banner');
 // const tokenRouter = require('./routes/route.token');
 // const layoutRouter = require('./routes/route.layout');
@@ -84,6 +85,7 @@ app.disable('x-powered-by');
 // app.use('/redeem', redeemRouter);
 app.use('/app', appRouter);
 app.use('/aso', asoRouter);
+app.use('/keyword', keywordRouter);
 
 /******************************************************
  Server error,  listen

@@ -1,13 +1,6 @@
 //[GET] Rosetta Score status 조회
 exports.getRosettaScoreStatus = async (req, res, next) => {
   try {
-    // const result = {
-    //   mko: 70,
-    //   cro: 62,
-    //   rso: 53,
-    //   goal: 250,
-    // };
-    // // FRONT- app.profile.model.ts > IRosettaScore 타입으로 변경처리
     const result = [
       {
         type: 'MKO',

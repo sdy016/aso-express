@@ -101,6 +101,34 @@ exports.postCustomKeywords = async (req, res, next) => {
 };
 
 /**
+ * [POST] 키워드 아이디로 키워드 등록
+ */
+exports.postCustomKeywordById = async (req, res, next) => {
+  try {
+    const { userId } = Util.getUserInfoByJWT(req);
+    const { keywordId } = req.body;
+    const result = true;
+    return res.send(result);
+  } catch (error) {
+    return res.status(500).json(error.message);
+  }
+};
+
+/**
+ * [POST] 키워드 아이디로 키워드 등록
+ */
+exports.deleteCustomKeywordById = async (req, res, next) => {
+  try {
+    const { userId } = Util.getUserInfoByJWT(req);
+    const { keywordId } = req.body;
+    const result = true;
+    return res.send(result);
+  } catch (error) {
+    return res.status(500).json(error.message);
+  }
+};
+
+/**
  * [PUT] custom 키워드 수정 (color, group)
  */
 exports.putCustomKeywords = async (req, res, next) => {
